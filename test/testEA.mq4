@@ -64,6 +64,19 @@ int OnInit()
       return(INIT_FAILED);
    }
    
+   /** test MoveEx method */
+   string data_path = TerminalInfoString(TERMINAL_DATA_PATH);
+   string path_ex_1 = data_path + "\\MQL4\\Files\\" + file_path_move;
+   string path_ex_2 = data_path + "\\MQL4\\Files\\" + file_path_move;
+   if(!File::MoveEx(path_ex_1, path_ex_2)) {
+      Print("MoveEx method failed");
+      return(INIT_FAILED);
+   }
+   if(!File::MoveEx(path_ex_2, path_ex_1)) {
+      Print("MoveEx method failed");
+      return(INIT_FAILED);
+   }
+   
    /** test file delete */
    File::Delete(file_path_move);
    
