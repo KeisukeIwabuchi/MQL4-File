@@ -3,8 +3,8 @@ MQL4でファイルを扱うためのモジュール。
 
 
 ## Install
-1. File.mqhとenums.mqhをダウンロード
-2. データフォルダを開き、/MQL4/Includes/mql4_modules/File/配下に2つのファイルを保存
+1. File.mqhをダウンロード
+2. データフォルダを開き、/MQL4/Includes/mql4_modules/File/配下にファイルを保存
 
 
 ## Usage
