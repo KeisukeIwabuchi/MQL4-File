@@ -1,40 +1,38 @@
 # MQL4-File
-MQL4でファイルを扱うためのモジュール。
+Module for handling files with MQL4.
 
 
 ## Install
-1. File.mqhをダウンロード
-2. データフォルダを開き、/MQL4/Includes/mql4_modules/File/配下にファイルを保存
+1. Download File.mqh
+2. Save the file to /MQL4/Includes/mql4_modules/File/File.mqh
 
 
 ## Usage
-File.mqhをincludeして利用する。  
+Include File.mqh and use it.
 
-### Copy  
-ファイルのコピー
+### Copy
+Copies the original file from a local folder to another file
 ```cpp
 // MQL4/Files内のhoge.txtを複製したuga.txtを作成
 File::Copy("hoge.txt", "uga.txt");
 ```
 
-### Delete  
-ファイルの削除
+### Delete
+Deletes the file from a local folder.
 ```cpp
 // MQL4/Files内のhoge.txtを削除
 File::Delete("hoge.txt");
 ```
 
-### Move  
-ファイルを移動
-移動範囲はMQL4/Filesフォルダ内に制限
+### Move
+Moves or renames a file.
 ```cpp
 // MQL4/Files内のhoge.txtをuga.txtとして保存
 File::Move("hoge.txt", "uga.txt");
 ```
 
 ### MoveEx
-ファイルの移動
-MQL4/Filesフォルダ外のファイル移動が可能
+Moves or renames a file. There is no restriction.
 ```cpp
 // MQL4/Files/hoge.txtをMQL4/Experts/hoge.txtへと移動
 string path1 = TerminalInfoString(TERMINAL_DATA_PATH) + "\\MQL4\\Files\\hoge.txt";
@@ -43,14 +41,14 @@ File::MoveEx(path1, path2);
 ```
 
 ### Read
-ファイルの中身を読み込み
+Reads a string from a file.
 ```cpp
 // MQL4/Files/hoge.txtの中身を読み取って変数へ保存
 string value = File::Read("hoge.txt");
 ```
 
 ### Write
-ファイルへ書き込み
+Writes the value of a string parameter into a TXT file.
 ```cpp
 // MQL4/Files/hoge.txtに「hoge」と書き込む
 string text = "hoge";
