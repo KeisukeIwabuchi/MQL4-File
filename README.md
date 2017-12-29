@@ -4,7 +4,7 @@ Module for handling files with MQL4.
 
 ## Install
 1. Download File.mqh
-2. Save the file to /MQL4/Includes/mql4_modules/File/File.mqh
+2. Save the file to /MQL4/Include/mql4_modules/File/File.mqh
 
 
 ## Usage
